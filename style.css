@@ -1,0 +1,645 @@
+*{
+  margin: 0;
+  padding: 0;
+  font-family:Verdana, Geneva, Tahoma, sans-serif;
+}
+html,body{
+  overflow-x: hidden;
+  
+}
+body{
+  overflow-y: hidden;
+
+}
+@media (max-width:900px) {
+  #about-sec,#details a{
+   display: none;
+  }
+  header #menu-icon{
+    display: block;
+  }
+  #costumers h3{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+  #portion2 #circle-for-image{
+    left: 50%;
+    transform: translate(-50%);
+  }
+  #page4 #worked-with{
+    font-size: 12px;
+  }
+  #page2 #headings h1{
+    font-size: 35px;
+  }
+  #page5 #side1{
+  display: none;
+ } 
+ #page5{
+  display: grid;
+  padding-bottom: 10vh;
+
+ }
+ #page5 #side2 h1{
+text-align:start;
+padding-left: 10%;
+ }
+
+}
+header{
+  width: 100%;
+  height: 100px;
+  background-color: rgb(31, 31, 31);
+  position: fixed;
+  z-index: 9;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+#menu-icon{
+  margin-left: 40px;
+  color: rgb(242, 120, 67);
+  cursor: pointer;
+  display: none;
+}
+.hi, .name, .designer {
+  opacity: 0; 
+  transform: translateX(-50px); 
+  animation-fill-mode: forwards;
+}
+
+.hi {
+  animation: slideIn .6s ease forwards; 
+}
+
+.name {
+  animation: slideIn .6s ease forwards;
+  animation-delay: .6s;
+}
+
+.designer {
+  animation: slideIn 1s ease forwards;
+  animation-delay: 1.3s; 
+}
+
+@keyframes slideIn {
+  to {
+      opacity: 1; 
+      transform: translateX(0); 
+  }
+}
+#each-det{
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+#arrow-each{
+  
+  color:  rgb(200, 93, 47);
+}
+#close-menu{
+  margin-left: 15px;
+  margin-top: 5px;
+  padding: 5px;
+  background-color: transparent;
+  border: none;
+  color: white;
+  font-size: 30px;
+  cursor: pointer;
+}
+
+#menu-page{
+  width: 100%;
+  height: 90vh;
+  background-color: rgb(177, 177, 177);
+  position: fixed;
+  z-index: 99;
+  top: 1%;
+  left: -100%;
+}
+#menu-page.visible{
+  left: 0;
+}
+.menuh1{
+  font-size: 30px;
+  margin-left: 20px;
+  margin-top: 20px;
+  color: rgb(242, 120, 67);
+  text-shadow: 0px 0px 20px black;
+  cursor: pointer;
+}
+
+#menu-det{
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  margin-left: 35px;
+  margin-top: 30px;
+}
+#menu-det a{
+  text-decoration: none;
+  color: black;
+  font-size: 20px;
+  font-weight: 400;
+}
+#header{
+  width: 100%;
+  height: 50px;
+  background-color: rgb(48, 48, 48);
+}
+#about-sec{
+  width: 150px;
+  font-size: 13px;
+  padding: 10px;
+  margin-left: 20px;
+  position: relative;
+  overflow: hidden;
+  border-radius: 4px;
+  text-decoration: none;
+
+}
+
+#about-sec:hover .h1{
+  color: rgb(221, 221, 221);
+  transition: .5s;
+}
+#about-sec:hover #back-sec{
+ left: 0;
+ transition: .5s;
+}
+#about-sec h1{
+  position: relative;
+  z-index: 2;
+  background: linear-gradient(to right, red, rgb(255, 132, 0));
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent; 
+}
+#back-sec{
+  width: 100%;
+  height: 100%;
+  background-color: rgb(0, 0, 0);
+  position: absolute;
+  top: 0%;
+  left: -100%;
+}
+#details{
+  margin-right: 20vh;
+  display: flex;
+  gap: 40px;
+}
+#details a{
+  text-decoration: none;
+  color: rgb(255, 154, 53);
+}
+.a1{
+  border-bottom: 1px solid  rgb(255, 154, 53);
+}
+#page1{
+  width: 100%;
+  height: 100%;
+  background-color: rgb(31, 31, 31);
+  display: flex;
+  flex-wrap: wrap;
+  
+}
+#portion1{
+  width: 100vh;
+  min-height: 100vh;
+  max-height: 100%;
+}
+#portion2{
+  width: 100vh;
+  min-height: 100vh;
+  max-height: 100%;
+  position: relative;
+
+}
+#my-det{
+  width: 40%;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  left: 30px;
+  top: 30%;
+}
+.designer{
+  width:90vh;
+  font-size: 50px;
+  background: linear-gradient(to right, red, rgb(255, 132, 0));
+  -webkit-background-clip: text;
+  color: transparent;
+  white-space: nowrap;
+}
+.hi{
+  color: grey;
+}
+.name{
+  color: rgb(200, 200, 200);
+}
+
+  #background-color{
+    width: 400px;
+    height: 400px;
+    background-color:rgb(254, 127, 0) ;
+    position: absolute;
+    border-radius: 50%;
+    top: 25%;
+    left: 90px;
+    filter: blur(100px);
+        opacity: .1;
+  }
+  #star{
+    position: absolute;
+    top: 20%;
+    left: 20%;
+    rotate: 50deg;
+    color: white;
+    animation: rotate 10s linear infinite;
+  }
+  @keyframes rotate {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg); 
+    }
+}
+#circle-for-image{
+  width: 400px;
+  height: 400px;
+  background-color: black;
+  border-radius: 50%;
+  position: absolute;
+  top: 30%;
+  left: 30%;
+  overflow: hidden;
+}
+#image{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: top;
+}
+#page2{
+  width: 100%;
+  height: 100%;
+  background-color: rgb(31, 31, 31);
+  padding-bottom: 10vh;
+}
+#costumers{
+ width: 100%;
+ height: 100%;
+ display: flex;
+ flex-wrap: wrap;
+ gap: 20px;
+ align-items: center;
+ justify-content: space-evenly;
+ padding-top: 20vh;
+}
+#costumers h3:hover{
+  background-color: black;
+  transition: .3s;
+  scale: 1.1;
+  cursor: pointer;
+}
+#costumers h3{
+  padding: 20px;
+  border: 1px solid rgb(60, 60, 60);
+  color: white;
+}
+.highlight{
+  background: linear-gradient(to right, red, rgb(255, 132, 0));
+  -webkit-background-clip: text;
+  color: transparent;
+}
+#my-portfolio{
+ width: 100%;
+ height: 100px;
+ margin-top: 90px;
+ background-color: rgb(198, 128, 0);
+ display: flex;
+ align-items: center;
+ justify-content: center;
+ color: white;
+}
+.swiper-container {
+  width: 50%;
+  height: 300px;
+  position: relative;
+  left: 20%;
+  margin-top: 80px;
+}
+#slide1{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+.swiper-slide {
+  background: #ddd;
+  border-radius: 10px;
+  color: #ddd;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 20px;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+  cursor: pointer;
+}
+.swiper-slide-active {
+  transform: scale(1.2);
+  z-index: 1;
+  opacity: 1;
+}
+.swiper-slide:not(.swiper-slide-active) {
+  opacity: 0.5;
+}
+
+#expanded-content {
+  text-align: center;
+  margin-top: 20px;
+  font-size: 24px;
+  transform: translateY(50px);
+  opacity: 0;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+}
+#expanded-content.show {
+  transform: translateY(0);
+  opacity: 1;
+}
+
+#page3{
+  width: 100%;
+  height: 100%;
+}
+#services{
+  width: 100%;
+  height: 100px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  align-items: center;
+  justify-content: center;
+  margin-top: 20vh;
+  color: white;
+}
+#services h5{
+  padding: 10px;
+  background-color: rgb(54, 54, 54);
+  color:rgb(188, 188, 188) ;
+}
+#services h3 {
+  background: linear-gradient(to right, red, rgb(255, 132, 0));
+  -webkit-background-clip: text;
+  color: transparent;
+  font-size: 26px;
+ letter-spacing: 10px;
+}
+#headings-serv{
+  width: 100%;
+  height: 80px;
+  display: flex;
+  align-items: center;
+  margin-top: 50px;
+  position: relative;
+  overflow: hidden;
+
+}
+#color-headings{
+ width: 50%;
+ height: 100%;
+ background-color: rgb(43, 43, 43);
+ position: absolute;
+ transition: .5s;
+}
+#headings-serv h3{
+  width: 50%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #ddd;
+  cursor: pointer;
+  position: relative;
+  z-index: 2;
+}
+#content-web,#content-design{
+  width: 100%;
+  height: 60vh;
+  position: absolute;
+  background-color: rgb(31, 31, 31); 
+  transition: .3s;
+
+}
+ul{
+  position: absolute;
+  left: 10%;
+  top: 30%;
+  display: flex;
+  flex-direction:column ;
+  gap: 20px;
+  color: #ddd;
+}
+#content-web a,#content-design a{
+  text-decoration: none;
+  color: white;
+  font-size: 16px;
+}
+#content-design{
+  display: none;
+}
+#page4{
+  width: 100%;
+  height: 100%;
+padding-top: 65vh;
+background-color: rgb(31, 31, 31);
+}
+#worked-with{
+ width: 100%;
+ height: 100px;
+ display: flex;
+ align-items: center;
+ justify-content: center;
+ color: #909090;
+ background-color: #424242;
+}
+#moving-anime{
+  width: 100%;
+  height: 100px;
+  background-color: aquamarine;
+  margin-top: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+#headings{
+width: 100%;
+height: 100%;
+display: flex;
+align-items: center;
+margin-top: 25vh;
+justify-content: center;
+margin-bottom: 25vh;
+
+}
+#headings h1{
+  width: 65%;
+  font-size: 55px;
+  color: white;
+  text-align: center;
+
+}
+#get-engage{
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  align-items: center;
+  justify-content: center;
+  padding-bottom: 20vh;
+}
+#get-engage h1{
+  width: 65%;
+  text-align: center;
+  color: #b6b6b6;
+  background-color: #262626;
+  padding: 20px;
+  padding-left: 40px;
+  padding-right: 40px;
+}
+#get-engage a,.Submit{
+  background: linear-gradient(to right, red, rgb(255, 132, 0));
+  color: white;
+  padding: 12px;
+  padding-left: 22px;
+  padding-right: 22px;
+  border-radius: 8px;
+  box-shadow: 0px 0px 30px black;
+  text-decoration: none;
+  font-size: 22px;
+}
+#get-engage a:hover{
+  background: linear-gradient(to right, red, rgb(255, 132, 0));
+  -webkit-background-clip: text;
+  color: transparent;
+  transition: .8s;
+  box-shadow: inset 0 0 20px black;
+}
+#page5{
+  width: 100%;
+  height: 60vh;
+  background-color: black;
+  display: flex;
+
+}
+#side1{
+  width: 50%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  padding-bottom: 10vh;
+
+}
+#side1-1,#side1-2{
+  width: 50%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  align-items: center;
+  justify-content: center;
+
+}
+#side1 h3,#side2 h3{
+  background: linear-gradient(to right, red, rgb(255, 132, 0));
+  -webkit-background-clip: text;
+  color: transparent;
+}
+#affect{
+  width: 30vh;
+  height: 22px;
+  font-size: 18px;
+  position: relative;
+  overflow: hidden;
+  text-align: center;
+}
+#affect::before{
+  content: '';
+  width: 100%;
+  height: 2px;
+  background: linear-gradient(to right, red, rgb(255, 132, 0));
+  position: absolute;
+  bottom: 0;
+  left: -100%;
+}
+#affect:hover::before{
+  left: 0;
+  transition: .3s;
+}
+#affect a{
+  color: white;
+  text-decoration: none;
+
+}
+#back-affect{
+  width: 100%;
+  height: 2px;
+  color: aqua;
+  background: linear-gradient(to right, red, rgb(255, 132, 0));
+  -webkit-background-clip: text;
+  color: transparent;
+  position: absolute;
+  bottom: 0%;
+ 
+}
+.web-d{
+  width: 30vh;
+}
+#side2{
+  width: 50%;
+  height: 100%;
+  color: #ddd;
+  margin-top: 8vh;
+  padding-bottom: 10vh;
+
+}
+#det-comment{
+  width: 60vh;
+  height: 100%;
+  margin-left: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  margin-top: 30px;
+  
+}
+#det-comment input{
+  background-color: transparent;
+  color: white;
+  border: 1px solid rgb(56, 56, 56);
+  padding: 4px;
+}
+.message-input{
+  width:60vh;
+  height: 10vh;
+  background-color: transparent;
+  color: white;
+  overflow: hidden;
+}
+.Submit{
+  width: 12vh;
+}
+.Submit:hover{
+  background: linear-gradient(to right, red, rgb(255, 132, 0));
+  -webkit-background-clip: text;
+  color: transparent;
+  transition: .8s;
+  box-shadow: inset 0 0 20px rgb(51, 51, 51);
+}

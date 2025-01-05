@@ -1,0 +1,337 @@
+
+*{
+  margin: 0;
+  padding: 0;
+  font-family:Verdana, Geneva, Tahoma, sans-serif;
+}
+body{
+  background-color: black;
+  overflow-x: hidden;
+}
+@media (max-width:900px) {
+  #about-sec,#details a{
+    display: none;
+   }
+   header #menu-icon{
+     display: block;
+   }
+   #main #heading-sec h1{
+    font-size: 40px;
+   }
+   #page2 #portion1{
+    width: 90%;
+    text-align: center;
+
+   }
+   #portion1 #get-in{
+    position: relative;
+    left: 50%;
+    transform: translate(-50%);
+   }
+   #page2 #portion2{
+    width: 90%;
+   }
+   #page1 #h5{
+    font-size: 20px;
+   }
+   #page2{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+
+   }
+  }
+  header{
+    width: 100%;
+    height: 100px;
+    background-color: rgb(31, 31, 31);
+    position: fixed;
+    z-index: 9;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  #menu-icon{
+    margin-left: 40px;
+    color: rgb(242, 120, 67);
+    cursor: pointer;
+    display: none;
+  }
+  #each-det{
+    display: flex;
+    align-items: center;
+    gap: 15px;
+  }
+  #arrow-each{
+    
+    color:  rgb(200, 93, 47);
+  }
+  #close-menu{
+    margin-left: 15px;
+    margin-top: 5px;
+    padding: 5px;
+    background-color: transparent;
+    border: none;
+    color: white;
+    font-size: 30px;
+    cursor: pointer;
+  }
+  
+  #menu-page{
+    width: 100%;
+    height: 90vh;
+    background-color: rgb(177, 177, 177);
+    position: fixed;
+    z-index: 99;
+    top: 1%;
+    left: -100%;
+  }
+  #menu-page.visible{
+    left: 0;
+  }
+  .menuh1{
+    font-size: 30px;
+    margin-left: 20px;
+    margin-top: 20px;
+    color: rgb(242, 120, 67);
+    text-shadow: 0px 0px 20px black;
+    cursor: pointer;
+  }
+  
+  #menu-det{
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    margin-left: 35px;
+    margin-top: 30px;
+  }
+  #menu-det a{
+    text-decoration: none;
+    color: black;
+    font-size: 20px;
+    font-weight: 400;
+  }
+  #header{
+    width: 100%;
+    height: 50px;
+    background-color: rgb(48, 48, 48);
+  }
+  #about-sec{
+    width: 150px;
+    font-size: 13px;
+    padding: 10px;
+    margin-left: 20px;
+    position: relative;
+    overflow: hidden;
+    border-radius: 4px;
+    text-decoration: none;
+  
+  }
+  
+  #about-sec:hover .h1{
+    color: rgb(221, 221, 221);
+    transition: .5s;
+  }
+  #about-sec:hover #back-sec{
+   left: 0;
+   transition: .5s;
+  }
+  #about-sec h1{
+    position: relative;
+    z-index: 2;
+    background: linear-gradient(to right, red, rgb(255, 132, 0));
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent; 
+  }
+  #details{
+    margin-right: 20vh;
+    display: flex;
+    gap: 40px;
+  }
+  #details a{
+    text-decoration: none;
+    color: rgb(255, 154, 53);
+  }
+  .a1{
+    border-bottom: 1px solid  rgb(255, 154, 53);
+  }
+  #heading-sec{
+    width: 100%;
+    height: 150px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-top: 150px;
+    background-color: rgb(31, 31, 31);
+    color: antiquewhite;
+    font-size: 30px;
+  }
+  #page1{
+    width: 100%;
+    height: 100%;
+    padding-top: 20vh;
+    display: flex;
+    justify-content: center;
+    background-color: rgb(31, 31, 31);
+    color: white;
+
+  }
+  #h5{
+    width: 80%;
+    height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 25px;
+
+  }
+  #h5 h5{
+    text-align: center;
+  }
+
+#page2{
+ width: 100%;
+ height: 100%;
+ display: flex;
+ position: relative;
+ flex-wrap: wrap;
+ padding-bottom: 10vh;
+ background-color:  rgb(31, 31, 31);
+}
+#portion1{
+  width: 30%;
+  height: 100%;
+  padding: 30px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 10vh;
+  padding-top: 20vh;
+
+}
+#get-in{
+  width: 24vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 20px;
+  border-radius: 4px;
+  height: 30px;
+  padding: 3px;
+  color: #ccc;
+  background: linear-gradient(to left,rgb(255, 157, 0),red);
+}
+
+#portion1 h3{
+  color: white;
+  font-size: 18px;
+}
+
+.phone-input {
+  display: flex;
+  align-items: center;
+  width: 340px;
+}
+
+select {
+  padding: 4px; 
+  border-radius: 5px 0 0 5px; /* Rounded corners on the left */
+  margin-right: -1px; /* Remove gap between dropdown and input */
+}
+
+input[type="tel"] {
+  padding: 10px; /* Padding for the input */
+  border: 1px solid #ccc; /* Border for the input */
+  border-radius: 0 5px 5px 0; /* Rounded corners on the right */
+  flex: 1; /* Allow input to take remaining space */
+}
+#portion2{
+  width: 60%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  align-items: center;
+  justify-content: center;
+  padding-top: 20vh;
+}
+#portion2 input{
+  width: 50vh;
+  height: 20px;
+  padding: 5px;
+  background-color: transparent;
+  border: 1px solid rgb(45, 45, 45);
+  color: white;
+}
+.message-input{
+  width:53vh;
+  height: 10vh;
+  background-color: transparent;
+  color: white;
+  overflow: hidden;
+}
+.Submit{
+  width: 10vh;
+  text-decoration: none;
+  background-color: aliceblue;
+  padding: 4px;
+  padding-left: 10px; 
+  padding-right: 20px;
+  background: linear-gradient(to right, red, rgb(255, 132, 0));
+  color: white;
+  font-size: 20px;
+  border-radius: 4px;
+}
+.Submit:hover{
+  background: linear-gradient(to right, red, rgb(255, 132, 0));
+  -webkit-background-clip: text;
+  color: transparent;
+  transition: .5s;
+  box-shadow: inset 0 0 20px rgb(51, 51, 51);
+}
+#last-page{
+  width: 100%;
+  height: 20vh;
+  background-color: black;
+}
+#last-details{
+  width: 100%;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: aliceblue;
+}
+#contacts{
+  width: 100%;
+  height:80px;
+  position: relative;
+ background-color: black;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+#contacts a{
+  text-decoration: none;
+  background: linear-gradient(to right, rgb(255, 132, 0), red); 
+  -webkit-background-clip: text;
+  color: transparent;
+  font-size: 20px;
+  position: relative;
+  overflow: hidden;
+}
+#contacts a::before{
+  content: '';
+  width: 100%;
+  height: 1px;
+  background-color: aliceblue;
+  position: absolute;
+  bottom: 0%;
+  left: -100%;
+}
+#contacts a:hover::before {
+  left: 0; 
+  transition: .3s;
+}
+
